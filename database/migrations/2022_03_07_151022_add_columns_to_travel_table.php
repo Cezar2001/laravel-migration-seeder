@@ -14,8 +14,8 @@ class AddColumnsToTravelTable extends Migration
     public function up()
     {
         Schema::table('travel', function (Blueprint $table) {
-            $table->string("name");
-            $table->string("surname");
+            $table->string("name")->first();
+            $table->string("surname")->after("name");
         });
     }
 
