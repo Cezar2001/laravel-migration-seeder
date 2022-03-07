@@ -27,7 +27,7 @@ class AddColumnsToTravelTable extends Migration
     public function down()
     {
         Schema::table('travel', function (Blueprint $table) {
-            //
+            $table->dropColumn(["name", "surname"]);
         });
     }
 }
